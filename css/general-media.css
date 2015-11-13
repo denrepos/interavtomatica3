@@ -24,10 +24,11 @@
         padding-left: 20px;
     }
 
+    .main-page-title{
+        font-size: 18px;
+        text-align: left;
+    }
 
-    /*.content > :not(.viewed-products, .automation-components, .popular-products, .manufacturers, .design-development, .text-under-footer) {*/
-        /*margin-right: 12px;*/
-    /*}*/
 }
 /*md*/
 @media (max-width: 767px) {
@@ -43,6 +44,9 @@
     }
     .display-block-less-640{
         display: block;
+    }
+    .video-in-the-subject{
+        margin-right: 0;
     }
 }
 /*sm*/

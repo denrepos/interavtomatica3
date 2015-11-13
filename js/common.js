@@ -420,7 +420,579 @@ $('document').ready(function(){
                 $('.found-articles-title').fadeIn();
             });
         }
-    })
+    });
+
+    //make checkbox as radio
+    $('.filter-brand .filter-item').click(function(){
+        if($(this).find('input:checked')[0]){
+
+            var changedElement = $('.filter-brand .filter-item input').not($(this).find('input')).filter(':checked');
+
+            $('.filter-brand .filter-item input').not($(this).find('input')).prop('checked',false);
+
+            changedElement.trigger('change');
+        }
+    });
+
+    //
+
+    //display checked filter items under title
+    $('#filter input').change(function(){
+
+        var chacked = $(this).is(':checked');
+        var index = $(this).closest('.filter-item').index()+1;
+        var name = $(this).closest('.filter-item').find('.item-name').text();
+        var filterSetClass = $(this).closest('.filter-items').attr('data-filter-class');
+        var filterParametersDelete = $('.filter-parameters-delete');
+        var bodyHeight = $('body').height();
+
+        if(chacked){
+            var greaterItems = filterParametersDelete.find('.'+filterSetClass+' .item').filter(function(el,item){
+                if(parseInt($(item).data('index')) > parseInt(index)){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+
+            if(greaterItems.length != 0){
+                $(greaterItems[0]).before('<div class="item" data-index="'+index+'"><div class="cross-button"></div><span>'+name+'</span></div>');
+            }else{
+                filterParametersDelete.find('.'+filterSetClass).append('<div class="item" data-index="'+index+'"><div class="cross-button"></div><span>'+name+'</span></div>');
+            }
+
+        }else{
+            filterParametersDelete.find('.'+filterSetClass).find('.item[data-index='+index+']').remove();
+        }
+
+
+        //if($(window).width() < 640) {
+        //
+        //    var scrollTop = $(window).scrollTop() + ($('body').height() - bodyHeight);
+        //
+        //    $('body,html').scrollTop(scrollTop);
+        //}
+    });
+
+    //remove filter items
+
+    $('.filter-parameters-delete').on('click','.item',function(e){
+
+        var target = $(e.target).closest('.item');
+        var filterSetClass = $(target).parent().attr('class');
+        var index = $(target).data('index');
+
+        $('.'+filterSetClass+' .filter-item:nth-child('+index+') input').prop('checked',false);
+        $(target).remove();
+    });
+    
+    //expand brands in filter
+    $('.another-brands').click(function(){
+
+        var hiddenItems = $('.filter-brand .filter-item').not(':visible');
+        var filterItems = $('.filter-brand .filter-items');
+
+        if(hiddenItems[0]) {
+
+            var itemHeight = hiddenItems.first().outerHeight();
+
+            var height = itemHeight * hiddenItems.length + filterItems.height();
+
+            filterItems.animate({'height': height});
+
+            hiddenItems.fadeIn();
+
+        }else{
+
+            var willHidden =  $('.filter-brand .filter-item:gt(6)');
+
+            willHidden.fadeOut(function(){
+
+                if(!willHidden.filter(':visible')[0]) {
+
+                    var visibleItems = filterItems.find('.filter-item:visible');
+                    var height = visibleItems.first().outerHeight() * visibleItems.length;
+
+                    filterItems.animate({height: height});
+
+                    $('body,html').animate({scrollTop:filterItems.offset().top-100}, '500', 'swing');
+                }
+            });
+
+        }
+
+    });
+
+    // switch main images on product page
+
+    $('.product-col-image .small-images .img-wrap').click(function(){
+
+        $(this).append(
+            $('.product-col-image .big-image img').replaceWith(
+                $(this).find('img')
+            )
+        );
+        magnifyingGlassEffect($('.product-col-image .big-image img'));
+    });
+
+
+    //magnifying glass effect on product page
+    magnifyingGlassEffect($('.product-col-image .big-image img'));
+
+    function magnifyingGlassEffect(jqObjqct) {
+        var magnify_native_width = 0;
+        var magnify_native_height = 0;
+        var magnify_mouse = {x: 0, y: 0};
+        var magnify;
+        var magnify_cur_img;
+
+        var ui = {
+            magniflier: jqObjqct
+        }
+
+        // Добавляем увеличительное стекло
+        if (ui.magniflier.length) {
+            var div = document.createElement('div');
+            div.setAttribute('class', 'glass');
+            ui.glass = $(div);
+
+            //$('body').append(div);
+            ui.magniflier.parent().append(div);
+        }
+
+        // Определяем положение курсора
+        var mouseMove = function (e) {
+            var $el = $(this);
+
+            // Получаем отступы до края картинки слева и сверху
+            var magnify_offset = magnify_cur_img.offset();
+
+            // Позиция курсора над изображением
+            // pageX/pageY - это значения по х и у положения курсора от краев браузера
+            magnify_mouse.x = e.pageX - magnify_offset.left;
+            magnify_mouse.y = e.pageY - magnify_offset.top;
+
+            // Увеличительное стекло должно отображаться только когда указатель мыши находится над картинкой
+            // При отводе курсора от картинки происходит плавное затухание лупы
+            // Поэтому необходимо проверить, не выходит ли за границы картинки положение курсора
+            if (
+                magnify_mouse.x < magnify_cur_img.width() &&
+                magnify_mouse.y < magnify_cur_img.height() &&
+                magnify_mouse.x > 0 &&
+                magnify_mouse.y > 0
+            ) {
+                // Если условие истинно то переходим дальше
+                magnify(e);
+            }
+            else {
+                // иначе скрываем
+                //ui.magniflier.css('opacity',1);
+                //ui.glass.fadeOut(100);
+            }
+
+            return;
+        };
+    //    Следующим шагом является, расчет положения лупы над картинкой и положение изображения в лупе (т.к. увеличенная область изображения будет являться фоном для блока glass). После расчета полученные значения присваиваем CSS свойствам блока glass:
+
+        var magnify = function (e) {
+
+            // Основное изображение будет в качестве фона в блоке div glass
+            // поэтому необходимо рассчитать положение фона в этом блоке
+            // относительно положения курсора над картинкой
+            //
+            // Таким образом мы рассчитываем положение фона
+            // и заносим полученные данные в переменную
+            // которая будет использоваться в качестве значения
+            // свойства background-position
+
+            var rx = Math.round(magnify_mouse.x / magnify_cur_img.width() * magnify_native_width - ui.glass.width() / 2) * -1;
+            var ry = Math.round(magnify_mouse.y / magnify_cur_img.height() * magnify_native_height - ui.glass.height() / 2) * -1;
+            var bg_pos = rx + "px " + ry + "px";
+
+            // Теперь определим положение самого увеличительного стекла
+            // т.е. блока div glass
+            // логика простая: половину ширины/высоты лупы вычитаем из
+            // положения курсора на странице
+
+            //var glass_left = e.pageX - ui.glass.width() / 2;
+            //var glass_top  = e.pageY - ui.glass.height() / 2;
+
+            // Теперь присваиваем полученные значения css свойствам лупы
+            ui.glass.css({
+                //left: glass_left,
+                //top: glass_top,
+                backgroundPosition: bg_pos
+            });
+
+            return;
+        };
+
+        // Движение курсора над изображению
+        $(ui.magniflier).on('mousemove', function () {
+
+
+            if(ui.magniflier[0].naturalWidth < ui.magniflier.parent().width() && ui.magniflier[0].naturalHeight < ui.magniflier.parent().height()){
+                return;
+            }
+
+            // Плавное появление лупы
+            ui.magniflier.animate({'opacity': 0}, 300);
+            //ui.magniflier.next().animate({'opacity':0},300);
+            ui.glass.fadeIn(300);
+            // Текущее изображение
+            magnify_cur_img = $(this);
+            // определяем путь до картинки
+            var src = magnify_cur_img.attr('src');
+            // Если существует src, устанавливаем фон для лупы
+            if (src) {
+                ui.glass.css({
+                    'background-image': 'url(' + src + ')',
+                    'background-repeat': 'no-repeat'
+                });
+            }
+
+            // Проверяем есть ли запись о первоначальном размере картинки magnify_native_width/magnify_native_height
+            // если нет, значит вычисляем и создаем об этом запись для каждой картинки
+            // иначе показываем лупу с увеличением
+
+            if (!magnify_cur_img.data('magnify_native_width')) {
+
+                // Создаем новый объект изображение, с актуальной идентичный актуальному изображению
+                // Это сделано для того чтобы получить реальные размеры изображения
+                // сделать напрямую мы этого не может, так как в атрибуте width указано др значение
+
+                var image_object = new Image();
+
+                image_object.onload = function () {
+
+                    // эта функция выполнится только тогда после успешной загрузки изображения
+                    // а до тех пор пока загружается magnify_native_width/magnify_native_height равны 0
+
+                    // определяем реальные размеры картинки
+                    magnify_native_width = image_object.width;
+                    magnify_native_height = image_object.height;
+
+                    // Записываем эти данные
+                    magnify_cur_img.data('magnify_native_width', magnify_native_width);
+                    magnify_cur_img.data('magnify_native_height', magnify_native_height);
+
+                    // Вызываем функцию mouseMove и происходит показ лупы
+                    mouseMove.apply(this, arguments);
+                    ui.glass.on('mousemove', mouseMove);
+
+                };
+
+                image_object.src = src;
+
+                return;
+            } else {
+                // получаем реальные размеры изображения
+                magnify_native_width = magnify_cur_img.data('magnify_native_width');
+                magnify_native_height = magnify_cur_img.data('magnify_native_height');
+            }
+
+            // Вызываем функцию mouseMove и происходит показ лупы
+            mouseMove.apply(this, arguments);
+            ui.glass.on('mousemove', mouseMove);
+        });
+
+        $(ui.glass).on('mouseleave', function () {
+            ui.glass.fadeOut(300);
+            ui.magniflier.animate({'opacity': 1});
+            //ui.magniflier.next().animate({'opacity':1});
+        });
+    }
+
+    //for scroll-button
+    $('.scroll-button').click(function(){
+        var scroll = $($(this).data('scroll-to')).offset().top - 30;
+        $('body,html').stop().animate({scrollTop:scroll}, '500', 'swing');
+    });
+
+    //plus and minus one to product quantity
+    $('.results-products-items .quantity .plus').click(function(){
+        $(this).siblings('.number-field').val(parseInt($(this).siblings('.number-field').val())+1);
+    });
+    $('.results-products-items .quantity .minus').click(function(){
+        var pn = parseInt($(this).siblings('.number-field').val());
+        if(pn>1) $(this).siblings('.number-field').val(pn-1);
+    });
+
+    // 0 - value in quantity input if it is empty
+    $('.results-product-item .number-field').on('focusout',function(){
+        if(isNaN(parseInt($(this).val()))){
+            $(this).val('0');
+        }else{
+            $(this).val(parseInt($(this).val()));
+        }
+    });
+
+    //remove product in cart
+    $('.results-products-items .delete-button').click(function(){
+        if(confirm($(this).closest('.results-products-items').data('delete-confirm-text'))){
+            if($('.results-product-item').length>1)$(this).closest('.results-product-item').remove();
+        }
+    });
+
+    $('.modal-cart .delete-all-products').click(function(){
+        if(confirm($(this).data('delete-confirm-text')))
+            $(this).closest('.modal-body').find('.results-product-item').remove();
+    });
+
+    //bootstrap collapse feature customization
+
+    $('.collapse-marker').each(function(){
+        var target = $(this).data('target');
+        if($(target).filter('.collapse').not('.in')[0]){
+            $(this).addClass('collapsed');
+        }
+    });
+
+    $('[data-toggle="collapse"]').click(function(){
+        var target = $(this).data('target');
+
+        if(!$(target).hasClass('in')){
+            $('.collapse-marker').filter('[data-target="'+target+'"]').removeClass('collapsed');
+        }else{
+            $('.collapse-marker').filter('[data-target="'+target+'"]').addClass('collapsed');
+        }
+
+        var accordion = $(this).closest($(this).data('parent'));
+
+        if(accordion[0]){
+            accordion.find('.collapse-marker').not('[data-target="'+target+'"]').addClass('collapsed');
+        }
+    });
+
+    //cancel event and highlight invalid input for .green-button (not .active )
+    $('.green-button,.modal-content .send').click(function(e){
+        var notValidate = $(this).closest('.panel .tab-pane.in, form').find('.input-required:not(.valid) input:visible:not(.disabled), .input-required:not(.valid) textarea:visible, .input-required:not(.valid) input:not(.disabled) ~ .required-highlight');
+        if(notValidate[0]){
+            notValidate.css({'background-color':'#fecccc'});
+            e.stopImmediatePropagation();
+            return false;
+        }
+    });
+
+    //form validation
+
+    var validationMasks = {
+        phone:'^[0-9,\\-,(,),+,\\s]{10,}$',
+        moreThen3Char:'^.{3,}$',
+        email:'^[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$'
+    }
+
+    $('.ordering .next-button').click(function(){
+
+        setTimeout(function() {
+
+            $('.os-2-content .tab-pane.in form').each(function () {
+
+                activeButtonIfAllValid($(this));
+            });
+        });
+
+        if($(window).width() < 530){
+            var scroll = $('.ordering .ordering-title').offset().top - 20;
+            $('body,html').stop().animate({scrollTop:scroll}, '500', 'swing');
+        }
+
+    });
+
+    $('.os-2-content ul.nav li div').on('shown.bs.tab',function(){
+        $('.os-2-content .tab-pane.in form').each(function () {
+
+            activeButtonIfAllValid($(this));
+        });
+    });
+
+    $('.os-1-content, .os-2-content').on('hidden.bs.collapse',function(e){
+
+        $(this).find('.input-required input[type=text]').css({'background-color':''});
+        $(this).find('.required-highlight').css({'background-color':''});
+    });
+
+    $('.input-required input[type=text], .input-required textarea').on('input focus',function(){
+        var regexp = validationMasks[$(this).data('validation-mask')];
+        var val = $(this).val();
+
+        if(val.match(regexp)){
+            $(this).siblings('input').css({'background-color':''});
+            $(this).css({'background-color':''}).closest('.input-wrap').removeClass('invalid').addClass('valid');
+        }else{
+            $(this).closest('.input-wrap').removeClass('valid').addClass('invalid');
+        }
+
+        activeButtonIfAllValid($(this).closest('form'));
+    });
+
+    $('.ordering .input-required input[type=radio]').on('click',function(){
+        $(this).closest('.input-required').addClass('valid').find('.required-highlight').css({'background-color':''});
+        activeButtonIfAllValid($(this).closest('form'));
+    });
+
+    $('.ordering .input-required input[type=text]').each(function(i){
+        if($(this).val() != ''){
+            $(this).focus().blur();
+        }
+        $('body,html').scrollTop(0);
+    });
+
+    $('.ordering .input-required input[type=radio]:checked').click();
+
+    activeButtonIfAllValid($('.ordering form'));
+
+    function activeButtonIfAllValid(form){
+
+        var allInputWraps = form.find('.input-required:visible');
+        var button = form.find('.next-button, .checkout-button', '.validate-button');
+
+        if(allInputWraps.not('.valid')[0]){
+            button.removeClass('active');
+        }else{
+            button.addClass('active');
+        }
+    }
+
+    //switch between inputs in block
+    $('.send-me-invoice input').focus(function(){
+        $(this).removeClass('disabled');
+        $('.send-me-invoice input').not(this).addClass('disabled');
+    });
+
+    // hide/show payment type depending on entity
+    $('[data-target="#legal-entity"]').on('shown.bs.tab', function (e) {
+        if($('.os-1-content').attr('aria-expanded') == 'false') {
+            $('.os-edit-button.link-button').click();
+        }
+        $('.for-legal-entity').show();
+        $('.for-individual-entity').hide();
+    });
+    $('[data-target="#individual-entity"]').on('shown.bs.tab', function (e) {
+        if($('.os-1-content').attr('aria-expanded') == 'false') {
+            $('.os-edit-button.link-button').click();
+        }
+        $('.for-legal-entity').hide();
+        $('.for-individual-entity').show();
+    });
+
+    //custom select on cart page (choose city)
+    $('.input-and-select-in-one input + ul li').click(function(){
+
+        if($(this).hasClass('another')){
+            $(this).closest('.input-wrap').find('input').val('').focus();
+            $(this).parent().css({'max-height':0,'opacity':0});
+        }else{
+            $(this).closest('.input-wrap').find('input').val($(this).text()).trigger('input');
+        }
+    });
+
+    $('.input-and-select-in-one .glyphicon-menu-down').click(function(){
+        
+        if($(this).closest('.input-wrap').find('ul').css('height') != '2px'){
+            $(this).next().blur();
+        }else{
+            $(this).closest('.input-wrap').find('ul').css({'max-height':'','opacity':''});
+            $(this).next().focus();
+        }
+    });
+
+    $('.input-and-select-in-one input').on('focusout',function(){
+        $(this).closest('.input-wrap').find('ul').css({'max-height':'','opacity':''});
+    });
+
+    //send invoice without shipping
+    $('.send-invoice-without-shipping input').change(function(){
+        if($(this).prop('checked')){
+            $('#legal-entity .next-button').fadeOut();
+            $('#legal-entity .checkout-block').fadeIn();
+        }else{
+            $('#legal-entity .next-button').fadeIn();
+            $('#legal-entity .checkout-block').fadeOut();
+        }
+    });
+
+    //hide / show comment on cart page
+
+    $('.add-comment-title').click(function(){
+        $(this).animate({'opacity':0},'fast',function(){
+            var tmp = $(this).text();
+            $(this).text($(this).data('text'));
+            $(this).data('text',tmp).animate({'opacity':1},'fast');
+        }).next().slideToggle()
+    });
+
+    //customize textarea
+    $(function() {
+        $(document).on('mousemove', 'textarea', function(e) {
+            var a = $(this).offset().top + $(this).outerHeight() - 16,  //  top border of bottom-right-corner-box area
+                b = $(this).offset().left + $(this).outerWidth() - 16;  //  left border of bottom-right-corner-box area
+            $(this).css({
+                cursor: e.pageY > a && e.pageX > b ? 'nw-resize' : ''
+            });
+        })
+    });
+
+    //show modal windows
+
+    $('.modal').on('hidden.bs.modal', function (e) {
+        $('body').css({padding:''});
+    });
+
+    $('.leave-feedback-button').click(function () {
+        $('#product-comment').modal('show');
+    });
+
+    $('.response-to-comment').click(function () {
+        $('#response-to-comment').modal('show');
+    });
+
+    $('.modal-product-comment .send').click(function () {
+        $('.modal').modal('hide');
+        setTimeout(function() {
+
+
+            $('#general-modal-window')
+                .find('.modal-dialog')
+                .css({'max-width': '420px'})
+                .find('.modal-body')
+                .empty()
+                .append('Спасибо, Ваш отзыл добавлен и будет опубликован после проверки модератором');
+            $('#general-modal-window').modal('show');
+        },500);
+        return false;
+    });
+
+
+    $('.cart-popup-button').click(function () {
+        $('#cart-popup').find('.modal-dialog').css({width:$('.content').width()});
+        $('#cart-popup').modal('show');
+    });
+
+    $('.clarify-price-button').click(function () {
+        $('#clarify-cost').modal('show');
+    });
+
+
+
+
+    //$('#general-modal-window')
+    //    .find('.modal-dialog')
+    //    .css({'max-width':'420px'})
+    //    .find('.modal-body')
+    //    .append('Спасибо, Ваш отзыл добавлен и будет опубликован после проверки модератором');
+    //$('#general-modal-window').modal('show');
+
+    //$('#product-comment').modal('show');
+
+    //$('#response-to-comment').modal('show');
+
+    $('#cart-popup').find('.modal-dialog').css({width:$('.content').width()});
+    //$('#cart-popup').modal('show');
+
+    //$('#clarify-cost').modal('show');
+
+
 });
 
 function makeSubmenu(context,x,y,width){
@@ -630,9 +1202,7 @@ function PreviewSlider(slider,windowPadding) {
 
                 }else if(loop == 'wheel') {
 
-                    //this.container.prepend(this.container.children().slice( - this.scrollStep));
                     this.prependItem();
-                    this.container.css('left',this.left - this.offset + this.container.position().left);
                     left -= this.offset;
 
                 }else{
@@ -671,7 +1241,6 @@ function PreviewSlider(slider,windowPadding) {
 
     this.prependItem = function(){
         this.container.prepend(this.container.children().slice( - this.scrollStep));
-        console.log(this.left - this.offset);
         this.container.css('left',this.left -= this.offset);
     }
 }
@@ -756,7 +1325,7 @@ PreviewSlider.init = function(){
                 }
             },100);
         }
-        if(e.type == 'touchmove'){
+        if(e.type == '___touchmove'){
 
             if(Math.abs(previewSlider.previosPositionY - e.changedTouches[0].clientY) < Math.abs(previewSlider.previosPositionX - e.changedTouches[0].clientX)){
 
@@ -770,7 +1339,7 @@ PreviewSlider.init = function(){
         }else
         if(e.type == 'swiperight'){
 
-            previewSlider.prevBlock('fast',false);
+            previewSlider.prevBlock(1000,false);
             swipe = true;
         }else
         if(e.type == 'swipeleft'){
@@ -785,3 +1354,22 @@ PreviewSlider.init = function(){
 function decodeEntities(encodedString) {
     return encodedString;
 }
+/*
+//disable text selection
+$.fn.disableSelection = function() {
+    function preventDefault () {
+        return false;
+    }
+    $(this).attr('unselectable', 'on')
+        .css('-moz-user-select', 'none')
+        .css('-khtml-user-select', 'none')
+        .css('-o-user-select', 'none')
+        .css('-msie-user-select', 'none')
+        .css('-webkit-user-select', 'none')
+        .css('user-select', 'none')
+        .mousedown(preventDefault);
+    .each(function() {
+        this.onselectstart = preventDefault;
+    });
+};
+*/

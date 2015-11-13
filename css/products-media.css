@@ -16,6 +16,13 @@
     .products-page .sort-by-wrap{
         float: left;
     }
+    .title-parameters-delete-wrap{
+        margin-left: 242px;
+        float: none;
+        width: auto;
+        margin-right: 10px;
+        position: relative;
+    }
 }
 @media (max-width: 999px) {
     .products-page .catalog-title h1{
@@ -48,8 +55,15 @@
         padding-right: 0;
         padding-left: 0;
     }
+    .title-parameters-delete-wrap{
+        margin-left: 0;
+    }
     .articles-in-the-subject .blog-item{
         margin-right: 0;
+    }
+    .filter-parameters-delete{
+        margin-bottom: 30px;
+        margin-left: 20px;
     }
 }
 @media (max-width: 479px) {

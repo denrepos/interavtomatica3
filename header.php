@@ -14,7 +14,6 @@
             </div>
             <div class="language-switch-box event">
                 <div class="current-language pointer">
-                    <div class="flag-image ru"></div>
                     <div class="title-lang">RU</div>
                     <div class="triangle-lang"></div>
                 </div>
@@ -58,8 +57,8 @@
                 <button></button>
             </div>
             <div class="delivery-cart-wrap">
-                <span>Доставка по всей Украине из Днепропетровска</span>
-                <div class="header-cart"><div class="cart-image-wrap"><div class="cart-image icon-empty-cart"></div></div><a class="light-blue-text pointer">Корзина (3)</a></div>
+                <span>Доставка по Украине из Днепропетровска</span>
+                <div class="header-cart" onclick="window.location = '/cart/cart.php'"><div class="cart-image-wrap"><div class="cart-image icon-empty-cart"></div></div><a class="light-blue-text pointer">Корзина (3)</a></div>
             </div>
             <div class="contacts-header">
                 <div class="contacts-item-1">
@@ -70,7 +69,7 @@
                 </div>
                 <div class="contacts-item-2">
                     <span>Офис: г.Днепропетровск</span>
-                        <a class="float-right pointer"
+                        <a class="float-right pointer road-map"
                           onclick="var modal = $('#road-map-modal');
                                 modal.find('.modal-title:eq(0)').text('КАРТА ПРОЕЗДА');
                                 modal.find('.modal-title:eq(1)').text('Офис - склад: г.Днепропетровск, ул. Паникахи, д. 2');

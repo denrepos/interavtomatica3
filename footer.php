@@ -40,7 +40,7 @@
                 <div class="contacts-item-2">
                     <span class="office">Офис: 49126 г. Днепропетровск</span>
                     <br/><span>ул. Паникахи, 2</span>
-                    <a class="float-right light-blue-text pointer" onclick="$('#road-map-modal').modal('show')">Карта проезда</a>
+                    <a class="float-right light-blue-text pointer" onclick="$('header .contacts-header .road-map').click()">Карта проезда</a>
                     <div class="additional-contacts display-none popup">
                         <span>Viber</span><span class="float-right bold">viber.interautomatic</span>
                         <br>

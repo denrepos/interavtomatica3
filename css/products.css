@@ -16,6 +16,7 @@
     margin-right: 30px;
     padding-right: 20px;
     position: relative;
+    line-height: 30px;
 }
 .filter-parameters-delete .item:hover .cross-button:after{
     background: url("../images/cross-close-red.png") no-repeat 0px 0px;
@@ -28,7 +29,7 @@
     content: '';
     position: absolute;
     right: -5px;
-    top: -2px;
+    top: 5px;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -105,10 +106,10 @@ label input:checked + .dummy-checkbox{
 label input:checked + .dummy-checkbox + .item-name{
     color: #2294D6;
 }
-.another-countries{
+.another-brands{
     margin-top: 10px;
 }
-.another-countries:after {
+.another-brands:after {
     content: '';
     height: 0px;
     width: 3px;
@@ -138,19 +139,12 @@ label input:checked + .dummy-checkbox + .item-name{
     margin-top: 10px;
     display: inline-block;
 }
-.banner.category-list a.active {
-    background-color: #E7F2F9;
-    margin: 0 -20px;
-    padding: 0 20px;
-}
-.banner.category-list a.active:hover .glyphicon-menu-right{
-    left: 20px;
-}
-.banner.category-list a.active .number{
-    right: 20px;
-}
-.products-page .in-the-subject-wrap{
+.products-page .in-the-subject-wrap {
     margin-left: 242px;
     padding-right: 12px;
     float: left;
+}
+.title-parameters-delete-wrap {
+    float: right;
+    width: 860px;
 }

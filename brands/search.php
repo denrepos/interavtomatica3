@@ -103,7 +103,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -209,7 +209,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -243,7 +243,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -277,7 +277,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -311,7 +311,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -345,7 +345,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -379,7 +379,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -413,7 +413,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -447,7 +447,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -481,7 +481,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -515,7 +515,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -549,7 +549,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -583,7 +583,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -617,7 +617,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -651,7 +651,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -685,7 +685,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -719,7 +719,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div><div class="results-product-item">
@@ -753,7 +753,7 @@
                             <div class="cart">
                                 <div class="wrap">
                                     <div class="cart-image icon-empty-cart"></div>
-                                    <div class="cart-image-hover icon-cart-hover"></div>
+                                    <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                                 </div>
                             </div>
                         </div>
@@ -978,22 +978,28 @@
                 <div class="banner-content align-left">
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Стандарты качества приборов</a></span>
+                        <span class="text-wrap">Стандарты качества приборов</span>
+                    </a>
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Как использовать индуктивные датчики</a></span>
+                        <span class="text-wrap">Как использовать индуктивные датчики</span>
+                    </a>
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Проектирование фотоэлементов в лабаратории</a></span>
+                        <span class="text-wrap">Проектирование фотоэлементов в лабаратории</span>
+                    </a>
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Таблицы маркировок блочных элементов</a></span>
+                        <span class="text-wrap">Таблицы маркировок блочных элементов</span>
+                    </a>
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Внедрение в производство</a></span>
+                        <span class="text-wrap">Внедрение в производство</span>
+                    </a>
                     <a href="#">
                         <div class="glyphicon glyphicon-menu-right"></div>
-                        <span class="text-wrap">Автоматика технологических процессов</a></span>
+                        <span class="text-wrap">Автоматика технологических процессов</span>
+                    </a>
                 </div>
             </div>
         </aside>

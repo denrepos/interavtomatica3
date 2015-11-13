@@ -95,7 +95,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -127,7 +127,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -143,7 +143,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -159,7 +159,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -175,7 +175,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -191,7 +191,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -207,7 +207,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -223,7 +223,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -239,7 +239,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -255,7 +255,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -271,7 +271,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -287,7 +287,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -303,7 +303,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -319,7 +319,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -335,7 +335,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -351,7 +351,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -367,7 +367,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -383,7 +383,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     <div class="general-preview">
                         <div class="img-wrap">
@@ -399,7 +399,7 @@
                         </div>
                         <div class="popular-preview-brand">Hydronix</div>
                         <div class="cart-image icon-empty-cart"></div>
-                        <div class="cart-image-hover icon-cart-hover"></div>
+                        <div class="cart-image-hover cart-popup-button icon-cart-hover"></div>
                     </div>
                     </div>
                     </div>

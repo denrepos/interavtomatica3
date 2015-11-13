@@ -11,45 +11,111 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .icon-bc-home {
   background-image: url(../images/spritesheet.png);
-  background-position: -373px -170px;
+  background-position: -419px -146px;
   width: 12px;
   height: 11px;
 }
+.icon-big-grey-star {
+  background-image: url(../images/spritesheet.png);
+  background-position: -367px -118px;
+  width: 26px;
+  height: 26px;
+}
+.icon-big-yellow-star {
+  background-image: url(../images/spritesheet.png);
+  background-position: -275px -118px;
+  width: 30px;
+  height: 28px;
+}
 .icon-cart-hover {
   background-image: url(../images/spritesheet.png);
-  background-position: -275px -94px;
+  background-position: -275px -20px;
   width: 41px;
   height: 41px;
 }
+.icon-cart-white {
+  background-image: url(../images/spritesheet.png);
+  background-position: -275px -146px;
+  width: 28px;
+  height: 20px;
+}
+.icon-chat {
+  background-image: url(../images/spritesheet.png);
+  background-position: -275px -166px;
+  width: 23px;
+  height: 19px;
+}
+.icon-close-button-cart-page-grey {
+  background-image: url(../images/spritesheet.png);
+  background-position: -275px -185px;
+  width: 20px;
+  height: 20px;
+}
+.icon-close-button-cart-page-red {
+  background-image: url(../images/spritesheet.png);
+  background-position: -295px -185px;
+  width: 20px;
+  height: 20px;
+}
 .icon-cross-close-blue {
   background-image: url(../images/spritesheet.png);
-  background-position: -447px -94px;
+  background-position: -442px -146px;
   width: 11px;
   height: 11px;
 }
 .icon-cross-close-red {
   background-image: url(../images/spritesheet.png);
-  background-position: -438px -135px;
+  background-position: -298px -166px;
   width: 19px;
   height: 19px;
 }
 .icon-cross-close-white {
   background-image: url(../images/spritesheet.png);
-  background-position: -396px -170px;
+  background-position: -431px -146px;
   width: 11px;
   height: 11px;
 }
 .icon-cross-close {
   background-image: url(../images/spritesheet.png);
-  background-position: -385px -170px;
+  background-position: -447px -20px;
   width: 11px;
   height: 11px;
 }
+.icon-down-arrow {
+  background-image: url(../images/spritesheet.png);
+  background-position: -335px -166px;
+  width: 10px;
+  height: 10px;
+}
 .icon-empty-cart {
   background-image: url(../images/spritesheet.png);
-  background-position: -409px -135px;
+  background-position: -422px -118px;
   width: 29px;
   height: 21px;
+}
+.icon-envelope {
+  background-image: url(../images/spritesheet.png);
+  background-position: -331px -146px;
+  width: 26px;
+  height: 18px;
+}
+.icon-favorites-star {
+  background-image: url(../images/spritesheet.png);
+  background-position: -375px -146px;
+  width: 18px;
+  height: 18px;
+}
+.icon-feedback-thumb-green {
+  background-image: url(../images/spritesheet.png);
+  background-position: -440px -37px;
+  width: 13px;
+  height: 14px;
+}
+.icon-feedback-thumb-red {
+  background-image: url(../images/spritesheet.png);
+  background-position: -427px -37px;
+  width: 13px;
+  height: 14px;
 }
 .icon-flags {
   background-image: url(../images/spritesheet.png);
@@ -59,57 +125,57 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-full-cart {
   background-image: url(../images/spritesheet.png);
-  background-position: -380px -135px;
+  background-position: -393px -118px;
   width: 29px;
   height: 21px;
 }
 .icon-grey-star {
   background-image: url(../images/spritesheet.png);
-  background-position: -429px -94px;
+  background-position: -429px -20px;
   width: 18px;
   height: 16px;
 }
 .icon-grey-stars {
   background-image: url(../images/spritesheet.png);
-  background-position: -316px -94px;
+  background-position: -316px -37px;
   width: 96px;
   height: 17px;
 }
-.icon-inside.banner.certificate .carousel-indicators li.active {
+.icon-inside.banner.certificate .carousel-indicators li,.icon-custom-radio {
   background-image: url(../images/spritesheet.png);
-  background-position: -427px -111px;
+  background-position: -406px -146px;
   width: 13px;
   height: 13px;
 }
-.icon-inside.banner.certificate .carousel-indicators li {
+.icon-inside.banner.certificate .carousel-indicators li.active,.icon-custom-radio.active {
   background-image: url(../images/spritesheet.png);
-  background-position: -440px -111px;
+  background-position: -393px -146px;
   width: 13px;
   height: 13px;
 }
 .icon-left-rewind-blue {
   background-image: url(../images/spritesheet.png);
-  background-position: -413px -57px;
+  background-position: -380px -61px;
   width: 35px;
   height: 35px;
 }
 .icon-left-rewind-grey {
   background-image: url(../images/spritesheet.png);
-  background-position: -275px -135px;
+  background-position: -345px -61px;
   width: 35px;
   height: 35px;
 }
 .icon-maestro {
   background-image: url(../images/spritesheet.png);
-  background-position: -275px -57px;
-  width: 69px;
-  height: 37px;
+  background-position: -408px -96px;
+  width: 44px;
+  height: 22px;
 }
 .icon-mastercard {
   background-image: url(../images/spritesheet.png);
-  background-position: -275px -20px;
-  width: 69px;
-  height: 37px;
+  background-position: -364px -96px;
+  width: 44px;
+  height: 22px;
 }
 .icon-pay-system {
   background-image: url(../images/spritesheet.png);
@@ -129,81 +195,87 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 121px;
   height: 84px;
 }
+.icon-privatbank {
+  background-image: url(../images/spritesheet.png);
+  background-position: -275px -96px;
+  width: 45px;
+  height: 22px;
+}
 .icon-right-rewind-blue {
   background-image: url(../images/spritesheet.png);
-  background-position: -413px -20px;
+  background-position: -275px -61px;
   width: 35px;
   height: 35px;
 }
 .icon-right-rewind-grey {
   background-image: url(../images/spritesheet.png);
-  background-position: -310px -135px;
+  background-position: -310px -61px;
   width: 35px;
   height: 35px;
 }
 .icon-russian_lang {
   background-image: url(../images/spritesheet.png);
-  background-position: -355px -170px;
+  background-position: -357px -146px;
   width: 18px;
   height: 18px;
 }
 .icon-search {
   background-image: url(../images/spritesheet.png);
-  background-position: -337px -170px;
+  background-position: -317px -166px;
   width: 18px;
   height: 19px;
 }
 .icon-sort-brends {
   background-image: url(../images/spritesheet.png);
-  background-position: -345px -135px;
+  background-position: -415px -61px;
   width: 35px;
   height: 26px;
 }
 .icon-swirl-arrow-hover {
   background-image: url(../images/spritesheet.png);
-  background-position: -306px -170px;
+  background-position: -305px -118px;
   width: 31px;
   height: 27px;
 }
 .icon-swirl-arrow {
   background-image: url(../images/spritesheet.png);
-  background-position: -275px -170px;
+  background-position: -336px -118px;
   width: 31px;
   height: 27px;
 }
 .icon-thumb {
   background-image: url(../images/spritesheet.png);
-  background-position: -412px -111px;
+  background-position: -412px -37px;
   width: 15px;
   height: 17px;
 }
 .icon-upstairs-arrow {
   background-image: url(../images/spritesheet.png);
-  background-position: -448px -20px;
+  background-position: -345px -166px;
   width: 10px;
   height: 10px;
 }
 .icon-visa {
   background-image: url(../images/spritesheet.png);
-  background-position: -344px -57px;
-  width: 69px;
-  height: 37px;
+  background-position: -320px -96px;
+  width: 44px;
+  height: 22px;
+}
+.icon-white-cart {
+  background-image: url(../images/spritesheet.png);
+  background-position: -303px -146px;
+  width: 28px;
+  height: 20px;
 }
 .icon-yellow-star {
   background-image: url(../images/spritesheet.png);
-  background-position: -412px -94px;
+  background-position: -412px -20px;
   width: 17px;
   height: 17px;
 }
 .icon-yellow-stars {
   background-image: url(../images/spritesheet.png);
-  background-position: -316px -111px;
+  background-position: -316px -20px;
   width: 96px;
   height: 17px;
-}
-.icon-приват-банк {
-  background-image: url(../images/spritesheet.png);
-  background-position: -344px -20px;
-  width: 69px;
-  height: 37px;
 }

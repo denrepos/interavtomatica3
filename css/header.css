@@ -101,6 +101,9 @@ img.main-logo {
     display: inline-block;
     padding-left: 165px;
 }
+.language-switch-box > .current-language {
+    padding-left: 15px;
+}
 .main-menu-items li a:hover{
     color: #2285C6;
     cursor: pointer;
@@ -218,6 +221,7 @@ button#main-menu-button div:last-child{
     position: absolute;
     right: 210px;
     display: inline-block;
+    cursor: pointer;
 }
 .contacts-header, .additional-contacts{
     width: 240px;

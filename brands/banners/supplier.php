@@ -1,7 +1,7 @@
 <div class="banner brands">
-	<a href="#" class="banner-header">
+	<div href="#" class="banner-header">
 		<span class="banner-header-title">ПОСТАВЩИК</span>
-	</a>
+	</div>
 
 	<div class="banner-content align-left">
 		Дистрибьютор по Украине <br/>
